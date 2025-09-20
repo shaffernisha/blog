@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Heebo:500,700|Open+Sans:400,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+    }
+
+    /* Header/Nav */
+    header {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      font-size: 1rem;
+      color: #333;
+      cursor: pointer;
+      padding: 4px 0;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li:hover {
+      color: #289765;
+    }
+
+    .nav-links .active {
+      color: #289765;
+      font-weight: bold;
+      border-bottom: 2px solid #289765;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .login {
+      background: none;
+      border: none;
+      color: #333;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .login:hover {
+      color: #289765;
+    }
+
+    .getstarted {
+      background: #289765;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .getstarted:hover {
+      background: #1f7a55;
+    }
+
+    /* Blog Section */
+    main {
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      min-height: 80vh;        
+      padding: 40px 20px;
+    }
+
+    .blog-list {
+      display: flex;
+      gap: 36px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .blog-card {
+      background: #f7f7f7;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      width: 440px;
+      display: flex;
+      flex-direction: column;
+      min-height: 380px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+      background: #e6e6e6;
+      border-radius: 10px ; 
+    }
+
+    .blog-content {
+      padding: 22px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .blog-date {
+      font-size: 0.95rem;
+      color: #888;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: #222;
+      margin: 0 0 6px 0;
+      font-family: 'Heebo', sans-serif;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.03rem;
+      margin-bottom: 0;
+    }
+
+    .read-more {
+      align-self: flex-start;
+      background: #ededed;
+      color: #289765;
+      padding: 6px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.02rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 13px;
+      transition: all 0.3s ease;
+    }
+
+    .read-more:hover {
+      background: #289765;
+      color: #fff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .blog-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 18px;
+      }
+      .blog-card {
+        width: 100%;
+        margin-bottom: 28px;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 18px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"> <span style="color:#289765;font-weight:bold;">Buzzsprout</span> </div>
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>How to Start a Podcast</li>
+        <li class="active">Blog</li>
+        <li>Buzzsprout Ads</li>
+      </ul>
+      <div class="nav-actions">
+        <button class="login">Log In</button>
+        <button class="getstarted">Get Started Free</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Blog Cards -->
+  <main>
+    <section class="blog-list">
+      <div class="blog-card">
+        <img src="./assets/1.jpg" alt="Fan Mail" class="card-img"/>
+        <div class="blog-content">
+          <span class="blog-date">May 06, 2024</span>
+          <h2>Introducing Fan Mail</h2>
+          <p>
+            Fan Mail lets your listeners text your podcast, and their messages appear inside your Buzzsprout account. It’s the best way to receive encouragement and feedback from your audience because it’s so easy for your listeners.
+          </p>
+          <button class="read-more">Read more</button>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="./assets/2.jpg" alt="How to Promote Your Podcast" class="card-img"/>
+        <div class="blog-content">
+          <span class="blog-date">April 16, 2024</span>
+          <h2>How to Promote Your Podcast: 8 Simple Strategies [2024]</h2>
+          <p>
+            Podcast promotion is essential for building your listenership, but the most effective methods often differ from traditional marketing tactics. This blog lists eight different podcast promotion strategies to help you attract the right listeners!
+          </p>
+          <button class="read-more">Read more</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
